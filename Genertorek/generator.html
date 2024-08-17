@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uga buga</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+
+        <header>
+
+            <div id="inpts">
+                <label>Szerokość: <input id="x" type="number" min="1" max="2048"/></label><br/>
+                <label>Wysokość: <input id="y" type="number" min="1" max="2048"/></label><br/>
+                <label>Tło: <input id="bg" type="number" min="0" max="6"/></label><br/>
+            </div>
+            <input type="button" value="Generuj podglad" onclick="generate()"/>
+            <input type="button" value="Generuj tekst" onclick="generate_txt()"/>
+            
+
+        </header>
+
+        <div id="text">
+
+        </div>
+
+    </div>
+
+    <div id="prewiev">
+
+        <div id="picker">
+                
+        </div>
+
+        <div id="content">
+            
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
