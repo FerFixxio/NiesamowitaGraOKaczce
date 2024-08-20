@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import javax.imageio.ImageIO;
 
 import main.GamePanel;
+import main.UtilityTool;
 
 public class TileManager {
 	GamePanel gp;
@@ -19,7 +20,7 @@ public class TileManager {
 		
 		this.gp = gp;
 		
-		tile = new Tile[10];
+		tile = new Tile[30];
 		mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow];
 		
 		getTileImage();
@@ -28,37 +29,41 @@ public class TileManager {
 	
 	public void getTileImage() {
 		
+		
+			
+			setup(0, "grass1", false);
+			setup(1, "grass2", false);
+			setup(2, "sand", false);
+			setup(3, "earth", false);
+			setup(4, "wall", true);
+			setup(5, "appletree", true);
+			setup(6, "water1", true);
+			setup(7, "water2", true);
+			setup(8, "water3", true);
+			setup(9, "water4", true);
+			setup(10, "water5", true);
+			setup(11, "water6", true);
+			setup(12, "water7", true);
+			setup(13, "water8", true);
+			setup(14, "water9", true);
+			
+			
+		
+		
+	}
+	public void setup(int index, String imageName, boolean collision) {
+		
+		UtilityTool uTool = new UtilityTool();
+		
 		try {
-			
-			tile[0] = new Tile();
-			tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass.png"));
-			
-			tile[1] = new Tile();
-			tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/wall.png"));
-			tile[1].collision = true;
-			
-			tile[2] = new Tile();
-			tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water.png"));
-			tile[2].collision = true;
-			
-			tile[3] = new Tile();
-			tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/earth.png"));
-			
-			tile[4]= new Tile();
-			tile[4].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tree.png"));
-			tile[4].collision = true;
-			
-			tile[5]= new Tile();
-			tile[5].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand.png"));
-			
-			tile[6] = new Tile();
-			tile[6].image = ImageIO.read(getClass().getResourceAsStream("/tiles/appletree.png"));
-			tile[6].collision = true;
+			tile[index] = new Tile();
+			tile[index].image = ImageIO.read(getClass().getResourceAsStream("/tiles/"+ imageName +".png"));
+			tile[index].image = uTool.scaleImage(tile[index].image, gp.tileSize, gp.tileSize);
+			tile[index].collision = collision;
 			
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	public void loadMap(String filePath) {
 		try {

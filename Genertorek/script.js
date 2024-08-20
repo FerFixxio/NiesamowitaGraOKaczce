@@ -20,7 +20,7 @@ function generate(){
 
     generated = true;
 
-    for(let k = 0; k <=6; k++){
+    for(let k = 0; k <=14; k++){
         document.getElementById("picker").innerHTML += '<div class="b'+k+' pick" onclick="pick('+k+')"></div>';
     }
 
@@ -57,7 +57,7 @@ function change(block){
 
     let b = document.getElementsByClassName("square")[block];
 
-    for (let l = 0; l <= 6; l++){
+    for (let l = 0; l <= 14; l++){
         b.classList.remove('b'+ l);
     }
 

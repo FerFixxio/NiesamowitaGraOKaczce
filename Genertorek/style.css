@@ -86,31 +86,62 @@ header{
 }
 
 .b0{
-    background-image: url('img/Grass.png');
+    background-image: url('img/grass1.png');
 }
 
 .b1{
-    background-image: url('img/Tree.png');
+    background-image: url('img/grass2.png');
 }
 
 .b2{
-    background-image: url('img/AppleTree.png');
-}
-
-.b3{
-    background-image: url('img/Earth.png');
-}
-
-.b4{
     background-image: url('img/Sand.png');
 }
 
-.b5{
+.b3{
+    background-image: url('img/Dirt.png');
+}
+
+.b4{
     background-image: url('img/Wall.png');
 }
 
+.b5{
+    background-image: url('img/AppleTree.png');
+}
+
 .b6{
-    background-image: url('img/Water.png');
+    background-image: url('img/Water1.png');
+}
+
+.b7{
+    background-image: url('img/Water2.png');
+}
+.b8{
+    background-image: url('img/Water3.png');
+}
+
+.b9{
+    background-image: url('img/Water4.png');
+}
+
+.b10{
+    background-image: url('img/Water5.png');
+}
+
+.b11{
+    background-image: url('img/Water6.png');
+}
+
+.b12{
+    background-image: url('img/Water7.png');
+}
+
+.b13{
+    background-image: url('img/Water8.png');
+}
+
+.b14{
+    background-image: url('img/Water9.png');
 }
 
 #picker{
